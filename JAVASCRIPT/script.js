@@ -71,10 +71,11 @@ function orderSubmitted(event, typeMeal){
             let quantity = parseInt(itemquantity.value);
             if (itemtype.value === '0' || isNaN(quantity) || quantity < 0 || quantity > 10){
                 itemerror.innerText = 'Please pick a valid item and quantity.';
-                valid = false;}
-                else{
-                    itemerror.innerText = '';
-                }
+                valid = false;
+            }
+            else{
+                itemerror.innerText = '';
+            }
                 
             }
             if (valid){
@@ -84,7 +85,7 @@ function orderSubmitted(event, typeMeal){
                     let itemtype = document.getElementById(item);
                     let itemquantity = document.getElementById(item + 'quantity');
                     let quantity = itemquantity.value|| 0;
-                    console.log(itemtype + 'Quantity:', quantity);}
+                    console.log(item + ' '+ itemtype.value+ ' '+ 'Quantity:', quantity);}
                     alert('Your Order has been Submitted!');
                 }
             }
